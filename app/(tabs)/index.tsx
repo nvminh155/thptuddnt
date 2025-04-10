@@ -1,5 +1,5 @@
-import { Text } from "@/components/ui/text";
+import DesignUI from "@/components/lab/lab2";
 
 export default function HomeScreen() {
-  return <Text>index</Text>;
+  return <DesignUI />;
 }
