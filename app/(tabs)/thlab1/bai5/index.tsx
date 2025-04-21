@@ -1,0 +1,57 @@
+import { Button, ButtonText } from "@/components/ui/button";
+import { HStack } from "@/components/ui/hstack";
+import { ArrowLeftIcon, Icon } from "@/components/ui/icon";
+import { Text } from "@/components/ui/text";
+import { VStack } from "@/components/ui/vstack";
+import React from "react";
+import { StyleProp, View, ViewStyle } from "react-native";
+
+const Bai5 = () => {
+  return (
+    <VStack className="flex-1">
+      <HStack className="bg-white justify-between py-4 px-2 items-center">
+        <Icon as={ArrowLeftIcon} />
+        <Text className="font-medium">Styling</Text>
+        <Text className="text-blue-500 font-semibold">Instructions</Text>
+      </HStack>
+
+      <HStack className="justify-between px-4 mt-20">
+        {Array.from({ length: 3 }, (_, index) => (
+          <Square
+            key={index}
+            text={`Square ${index + 1}`}
+            style={{
+              backgroundColor:
+                index === 0 ? "red" : index === 1 ? "blue" : "green",
+            }}
+          />
+        ))}
+      </HStack>
+    </VStack>
+  );
+};
+
+type SquareProps = {
+  text?: string;
+  style?: StyleProp<ViewStyle>;
+};
+
+const Square = ({ text, style }: SquareProps) => {
+  return (
+    <View
+      style={[
+        {
+          backgroundColor: "red",
+          width: 100,
+          height: 100,
+          justifyContent: "center",
+          alignItems: "center",
+        },
+        style,
+      ]}
+    >
+      <Text>{text}</Text>
+    </View>
+  );
+};
+export default Bai5;
