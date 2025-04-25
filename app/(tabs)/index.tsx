@@ -26,6 +26,15 @@ export default function HomeScreen() {
       >
         <ButtonText>THLabDrawer</ButtonText>
       </Button>
+
+      <Button
+        onPress={() => {
+          router.push("/ltlab4/stack/screen1");
+        }}
+        className="mb-4"
+      >
+        <ButtonText>Ly thuyet lab 4</ButtonText>
+      </Button>
     </VStack>
   );
 }
