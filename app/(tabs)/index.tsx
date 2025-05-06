@@ -18,6 +18,17 @@ export default function HomeScreen() {
         </Button>
       ))}
 
+
+<Button
+        onPress={() => {
+          router.push("/thlab1p2");
+        }}
+        className="mb-4"
+      >
+        <ButtonText>TH LAB 1 P2</ButtonText>
+      </Button>
+
+
       <Button
         onPress={() => {
           router.push("/thlab2_drawer/contacts");
